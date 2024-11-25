@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratory 2</title>
+  <style>
+    
+      body{
+      font-family: Verdana, 
+      Geneva, Tahoma, sans-serif;
+    }
+    form{
+      border: solid 2px #512125;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      background-color: #F6EBBD;
+      width: 80%;
+      display: block;
+      margin: auto;
+    }
+    button{
+      width: 40%;
+      display:block;
+      margin:auto;
+      margin-top: 1rem;
+      border: solid 2px #54B9DC;
+      border-radius:.5rem;
+      color: #469CF8;
+    }
+    button:hover{
+      background-color: #62D6C0;
+      width: 43%;
+    }
+    label,input{
+      margin: 1rem, 1rem;
+      font-size: 14px;
+      text-align: left;
+    }
+    label{
+      font-size: 15px;
+    }
+    input, textarea, select{
+      width: 100%;
+      padding: .5rem 1rem;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: solid 2px #512125;
+      border-radius: .7rem;
+    }
+    input:focus, textarea:focus, select:focus{
+      outline: solid 1px #9D3233;
+    }
+    input[type="checkbox"],[type="radio"]{
+      width: 10%;
+      padding: .5rem 1rem;
+    }
+    a{
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="submit_form.php" method="post">
+    <label>First Name:</label>
+    <input type="text" name="fname" size="20" placeholder="Enter your First Name" required> <br>
+    <label>Last Name:</label>
+    <input type="text" name="lname" size="20" placeholder="Enter your Last Name" required><br> 
+    <label>Email Address:</label>
+    <input type="email" name="email" size="20" placeholder="Enter your Email Address" required><br>
+    <label>Date of Birth:</label>
+    <input type="date" name="dob" required> <br>
+    <label>Gender:</label> <br>
+    <input type="radio" name="gender" required>Male <br>
+    <input type="radio" name="gender" required>Female <br>
+    <label>Address:</label><br>
+    <textarea name="address"size="50" placeholder="e.g. Barangay, City, Province"  required></textarea> <br>
+    <label>Country:</label><br>
+    <select name="Country" id="Country" required>
+      <option value="Select a Country"selected disabled>Select a Country</option>
+      <option value="Philippines">Philippines</option>
+      <option value="Vietnam">Vietnam</option>
+      <option value="Singapore">Singapore</option>
+      <option value="South Korea">South Korea</option>
+      <option value="Malaysia">Malaysia</option>
+    </select><br>
+    <input type="checkbox" required>Agree to the
+    <a href="terms_condition.html">Terms and Condtions</a><br>
+    <button type="submit" value="Submit">Submit</button>
+  </form>
+</body>
+

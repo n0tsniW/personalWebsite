@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory 3</title>
+    <style>
+        
+        body {
+            background-color: #262626;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #413d3d;
+            margin: 0 0 15px;
+            margin-top: 1rem;
+        }
+
+        .audio-container {
+            background-color: #ed2c2cee;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 400px;
+            text-align: center;   
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border-radius: 20px;
+        }
+
+        audio {
+            display: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .audio-container:hover audio {
+            display: block;
+        }
+
+        .song-image {
+            width: 50%;
+            max-width: 260px;
+            height: auto;
+            margin: 15px 0;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        audio:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        }
+
+
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 20px;
+                height: auto;
+            }
+
+            .audio-container {
+                padding: 20px;
+                max-width: 100%;
+                box-shadow: none;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            .song-image {
+                width: 70%; 
+                margin: 10px auto;
+            }
+
+            audio {
+                margin-top: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="audio-container">
+        <h3>Enjoy the audio clip below. Click the audio and play button to start the playback.</h3>
+        <h1>One_of_the_GirlsxGood_for_You by The Weeknd/Selena Gomez</h1>
+        <img src="images/ALBUMCOVER.jpg" alt="Album Cover" class="song-image">
+        <audio controls loop>
+            <source src="/portfolio/Laboratory3/audio/One_of_the_GirlsxGood_for_You.mp3" type="audio/mp3">
+            <source src="/portfolio/Laboratory3/audio/One_of_the_GirlsxGood_for_You.ogg" type="audio/ogg">
+        </audio>
+        <h3>If the audio does not play, try using a different browser or check if the audio file is supported on your device.</h3>
+    </div>
+</body>
+</html>

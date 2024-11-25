@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratory 6</title>
+  <style>
+      form { 
+  border-radius: 20px; 
+  border: solid 2px #54B9DC; 
+  padding: 2rem; 
+  width: 80%; 
+  display: block; 
+  margin: auto; 
+  align-items: center; 
+}  
+ 
+label { 
+  font: 15px; 
+  text-align: left; 
+} 
+ 
+input { 
+  width: 90%; 
+  padding: 10px 15px; 
+  margin: 8px 0; 
+  border: 2px solid skyblue; 
+  border-radius: 10px; 
+  background-color: #f1f1f1; 
+  box-shadow: 0 2px 4px lightgray; 
+} 
+ 
+input[type=radio] { 
+  width: 10%; 
+  padding: 12px 20px; 
+  margin: 8px 0; 
+  box-shadow: none; 
+} 
+ 
+input[type=checkbox] { 
+  width: 10%; 
+  padding: 12px 20px; 
+  margin: 8px 0; 
+  box-shadow: none; 
+} 
+ 
+textarea { 
+  width: 85%; 
+  height: auto; 
+  padding: 12px 20px; 
+  border: 1px solid lightskyblue; 
+  border-radius: 10px; 
+  background-color: #f1f1f1; 
+  resize: none; 
+} 
+ 
+select { 
+  width: 50%; 
+  padding: 16px 20px; 
+  border: none; 
+  border-bottom: 2px solid seagreen; 
+  border-radius: 10px; 
+  background-color: #f1f1f1; 
+} 
+ 
+button { 
+  width: 30%; 
+  border: none; 
+  border-radius: 10px; 
+  padding: 8px 8px; 
+  display: flex; 
+  font-size: 16px; 
+  margin: auto; 
+  cursor: pointer; 
+  justify-content: center; 
+  background-color: skyblue; 
+} 
+ 
+button:hover { 
+  background-color: #04AA6D; 
+  color: black; 
+} 
+ 
+::placeholder { 
+  font-family: verdana; 
+  font-style: italic; 
+}
+  </style>
+</head>
+<body>
+  <form action="submit_form.php" method="post" onsubmit="return validateForm(event)">
+    <label>First Name:</label>
+    <input type="text" name="fname" id="firstName" size="20" placeholder="Enter your First Name"> <br>
+    <label>Last Name:</label>
+    <input type="text" name="lname" id="lastName" size="20" placeholder="Enter your Last Name"><br> 
+    <label>Email Address:</label>
+    <input type="email" name="email" id="email" size="20" placeholder="Enter your Email Address"><br>
+    <label>Date of Birth:</label>
+    <input type="date" name="dob" id="dob"><br>
+    <label>Gender:</label> <br>
+    <input type="radio" name="gender" value="Male">Male <br>
+    <input type="radio" name="gender" value="Female">Female <br>
+    <label>Address:</label><br>
+    <textarea name="address" id="address" placeholder="e.g. Barangay, City, Province"></textarea> <br>
+    <label>Country:</label><br>
+    <select name="Country" id="Country">
+      <option value="" selected disabled>Select a Country</option>
+      <option value="Philippines">Philippines</option>
+      <option value="Vietnam">Vietnam</option>
+      <option value="Singapore">Singapore</option>
+      <option value="South Korea">South Korea</option>
+      <option value="Malaysia">Malaysia</option>
+    </select><br>
+    <input type="checkbox" id="term">Agree to the
+    <a href="terms_condition.html">Terms and Conditions</a><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+      
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const dateOfBirth = document.getElementById('dob').value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const address = document.getElementById('address').value.trim();
+      const country = document.getElementById('Country').value;
+      const terms = document.getElementById('term').checked;
+      if (!firstName || !lastName) {
+        alert("Please enter both your first and last name");
+        return false;
+      } 
+      if (!email) {
+        alert("Please enter your email");
+        return false;
+      } 
+      if (!dateOfBirth) {
+        alert("Please select your date of birth");
+        return false;
+      } 
+      if (!gender) {
+        alert("Please select your gender");
+        return false;
+      } 
+      if (!address) {
+        alert("Please enter your address");
+        return false;
+      } 
+      if (!country) {
+        alert("Please select your country");
+        return false;
+      } 
+      if (!terms) {
+        alert("You must agree to the terms and conditions");
+        return false;
+      } 
+
+      if (confirm("Are you sure you want to submit?")) {
+        alert("Successfully Submitted");
+        return true;
+      } else {
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>

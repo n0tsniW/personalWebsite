@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/global.css" />
+        <link rel="stylesheet" href="/css/contact.css">
+        <link rel="shortcut icon" href="/images/wlogo.png" type="image/x-icon" />
+        <title>Winston's Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <a href="index.html"><p>W</p></a>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="/index.html"><img src="/images/svg/homeicon.svg" alt="home" />Home</a>
+                    </li>
+                    <li>
+                        <a href="/about.html"><img src="/images/svg/abouticon.svg" alt="about" />About</a>
+                    </li>
+                    <li>
+                        <a href="/portfolio.html"><img src="/images/svg/portfolio.svg" alt="" />Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html"><img src="/images/svg/contacticon.svg" alt="contact" />Contact</a>
+                        <hr class="menu-line fade" />
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleNavbar()"><img src="/images/svg/burger.svg" alt="burger"></div>
+        </header>
+        <div class="space"></div>
+        <section class="contact-form-section fade">
+            <h2><span class="highlight-blue">Contact</span> <span class="highlight-red">Me</span></h2>
+            <p>
+                Feel free to get in touch with me whenever you need assistance or want to discuss anything. I'm here to
+                help you with pleasure!
+            </p>
+            <form method="get" class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your E-mail" required>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+        <p class="text fade">or message me through social media accounts</p>
+        <div class="contact fade">
+            <div class="social-icons">
+                <a
+                    href="https://m.me/100086658815913?hash=AbbTAbtvtXAMM9-s&source=qr_link_share"
+                    target="_blank"
+                >
+                    <img src="/images/contact apps/messenger.png" alt="messenger" class="social-icon" />
+                </a>
+                <a href="https://www.instagram.com/ton_isni?igsh=aGg1ZjVzY3U2ZDdz" target="_blank">
+                    <img src="/images/contact apps/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <a href="t.me/tonwastaken" target="_blank">
+                    <img src="/images/contact apps/telegram.png" alt="telegram" class="social-icon" />
+                </a>
+            </div>
+        </div>
+        <script src="/javascript/function.js"></script>
+    </body>
+</html>
