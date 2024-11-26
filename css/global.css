@@ -272,13 +272,11 @@ nav img {
 }
 .about2 h2 {
     text-align: center;
-    display: block;
 }
 .about2 {
-    display: flex;
+    display: block;
     flex-direction: column;
     height: 80vh;
-    gap: 30px;
 }
 
 .motto {
@@ -298,6 +296,7 @@ nav img {
 .skills {
     text-align: center;
     display: block;
+    height: 100%;
 }
 
 .app-images-container {
