@@ -257,8 +257,8 @@ nav img {
     box-shadow: 0 6px 10px var(--grayish-color);
 }
 .about-video {
-    max-width: 300px;
-    max-height: 150px;
+    max-width: 350px;
+    max-height: auto;
     display: block;
     margin: 0 auto;
 }

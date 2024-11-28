@@ -61,7 +61,7 @@
             return;
         }
 
-        alert("Message sent!");
+        alert("Message sent! Thank you for your feedback!");
 
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
