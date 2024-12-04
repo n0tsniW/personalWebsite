@@ -20,7 +20,7 @@
                     textIndex = (textIndex + 1) % texts.length; 
                     typingTextElement.innerHTML = ""; 
                     typeWriter(); 
-                }, 5000); 
+                }, 3500); 
             }
         }
     
